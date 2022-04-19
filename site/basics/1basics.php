@@ -62,4 +62,20 @@ foreach($ages as $age){
 foreach($ages as $key => $age){
     echo $key. ' is ' . $age . ' years old' . '<br />';
 }
+
+br('Funções');
+function greet($name){
+    echo 'Hello ' . $name;
+}
+greet('Jean');
+
+br('If');
+$num = 10;
+if($num == 10){
+    echo 'Correct';
+} elseif($num == 50) {
+    echo 'Awesome';
+} else {
+    echo 'Wrong';
+}
 ?>
