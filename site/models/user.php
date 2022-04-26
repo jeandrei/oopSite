@@ -8,7 +8,7 @@ class UserModel extends Model{
         $password = md5($post['password']);        
 
         if($post['submit']){ 
-            if($post['name'] == '' || $post['email'] == '' || $post['password']){
+            if($post['name'] == '' || $post['email'] == '' || $post['password'] == ''){
                 Messages::setMsg('Please Fill In All Fields', 'error');
                 return;
             }           
