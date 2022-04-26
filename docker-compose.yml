@@ -26,8 +26,8 @@ services:
     command: --max_allowed_packet=32505856    
     environment:
         #02 em troque mvc pelo nome do banco de dados do projeto
-        MYSQL_DATABASE: myblog
-        MYSQL_USER: myblog
+        MYSQL_DATABASE: shareboard
+        MYSQL_USER: shareboard
         MYSQL_PASSWORD: mypassword
         MYSQL_ROOT_PASSWORD: rootadm 
     volumes:
@@ -46,7 +46,7 @@ services:
             - 8000:80
         environment:
         #04 Troque mvc pelo nome do banco de dados do projeto
-            MYSQL_USER: myblog
+            MYSQL_USER: shareboard
             MYSQL_PASSWORD: mypassword
             MYSQL_ROOT_PASSWORD: rootadm
             restart: always
