@@ -11,8 +11,8 @@ class ShareModel extends Model{
         // Sanitize POST
         $post = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 
-        if($post['submit']){
-            if($post['title'] == '' || $post['body'] == '' || $post['link']){
+        if($post['submit']){          
+            if($post['title'] == '' || $post['body'] == '' || $post['link'] == ''){
                 Messages::setMsg('Please Fill In All Fields', 'error');
                 return;
             }     

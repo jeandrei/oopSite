@@ -1,11 +1,13 @@
 <?php
 
+//a classe bootstrap é iniciada lá no main index $bootstrap = new Bootstrap($_GET); o que vem no GET passa para __construct($request)
+
 class Bootstrap{
     private $controller;
     private $action;
     private $request;
 
-
+    //essa divisão de controller e action é feita no arquivo .htaccess
     public function __construct($request){
         $this->request = $request;
         if($this->request['controller'] == ""){
