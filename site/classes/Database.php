@@ -34,12 +34,12 @@ class Database {
     }
 
     public function bind($param, $value, $type = null){
-        if(iss_null($type)){
+        if(is_null($type)){
             switch(true){
                 case is_int($value):
                     $type = PDO::PARAM_INT;
                     break;
-                case is_boll($value):
+                case is_bool($value):
                     $type = PDO::PARAM_BOLL;
                     break;
                 case is_null($value):
@@ -54,6 +54,10 @@ class Database {
 
     public function execute(){
         return $this->stmt->execute();
+    }
+    
+    public function lastInsertId(){
+        $this->dbh->lastInsertId();
     }
 
     public function resultSet(){
